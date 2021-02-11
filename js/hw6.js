@@ -451,11 +451,216 @@
 // const eachElementInThirdIsOdd = thirdArray.every((value) => value % 2 !== 0);
 
 
-Task 27
+// Task 27
+// Дополни функцию isEveryUserActive(users) так, чтобы она проверяла все ли пользователи сейчас активны (свойство isActive) и возвращала true или false.
 
 // Пиши код ниже этой строки
-const isEveryUserActive = (users) => {
-  const isActiveNow = users.every((user) => users.iActive === true); 
-  const isNotActiveNow = users.every((user) => users.iActive === false); 
+// const isEveryUserActive = (users) => {
+//   return users.every((user) => user.isActive === true);
+//     return users.every((user) => user.isActive === false);
+//   };
+  // Пиши код выше этой строки
+
+
+//   Task 28
+// Используя метод some() дополни код так, чтобы:
+// В переменной anyElementInFirstIsEven был результат проверки наличия чётных элементов в массиве firstArray.
+// В переменной anyElementInFirstIsOdd был результат проверки наличия нечётных элементов в массиве firstArray.
+// В переменной anyElementInSecondIsEven был результат проверки наличия чётных элементов в массиве secondArray.
+// В переменной anyElementInSecondIsOdd был результат проверки наличия нечётных элементов в массиве secondArray.
+// В переменной anyElementInThirdIsEven был результат проверки наличия чётных элементов в массиве thirdArray.
+// В переменной anyElementInThirdIsOdd был результат проверки наличия нечётных элементов в массиве thirdArray.
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Пиши код ниже этой строки
+
+// const anyElementInFirstIsEven = firstArray.some(value => value % 2=== 0);
+// const anyElementInFirstIsOdd = firstArray.some(value => value % 2 !== 0);
+
+// const anyElementInSecondIsEven = secondArray.some(value => value % 2=== 0);
+// const anyElementInSecondIsOdd = secondArray.some(value => value % 2 !== 0);
+
+// const anyElementInThirdIsEven = thirdArray.some(value => value % 2=== 0);
+// const anyElementInThirdIsOdd = thirdArray.some(value => value % 2 !== 0);
+
+
+// Task 29
+// Дополни функцию isAnyUserActive(users) так, чтобы она проверяла наличие активных пользователей (свойство isActive) и возвращала true или false.
+
+// Пиши код ниже этой строки
+// const isAnyUserActive = users => {
+//   return users.some(user => user.isActive === true);
+//   return users.some(user => user.isActive === false);
+// };
+// Пиши код выше этой строки
+
+
+// Task 30
+// Игровому сервису необходим функционал подсчёта среднего времени проведённого в играх. 
+// Дополни код так, чтобы в переменной totalPlayTime получилось общее игровое время из массива playtimes.
+
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// // Пиши код ниже этой строки
+
+// const totalPlayTime = playtimes.reduce((acc, number) => {
+//   return acc + number;
+// }, 0);
+
+// // Пиши код выше этой строки
+// const averagePlayTime = totalPlayTime / playtimes.length;
+
+
+// Task 31
+// Нашему сервису необходимо рассчитать среднее время проведённое в одной игре для каждого игрока, и получить общую сумму этих времён. 
+// Рассчитать время для каждого из игроков, можно разделив его время (свойство playtime) на количество игр (свойство gamesPlayed).
+
+// const players = [
+//   { name: 'Манго', playtime: 1270, gamesPlayed: 4 },
+//   { name: 'Поли', playtime: 469, gamesPlayed: 2 },
+//   { name: 'Аякс', playtime: 690, gamesPlayed: 3 },
+//   { name: 'Киви', playtime: 241, gamesPlayed: 1 },
+// ];
+// // Пиши код ниже этой строки
+// const totalAveragePlaytimePerGame = players.reduce((total, player) => {
+//   return total + player.playtime / player.gamesPlayed;
+// }, 0);
+
+
+// Task 32
+// Дополни функцию calculateTotalBalance(users) так, чтобы она считала и возвращала сумму всех средств (свойство balance),
+// которые хранят пользователи из массива users.
+
+// Пиши код ниже этой строки
+// const calculateTotalBalance = users => users.reduce((balance, user) => {
+//   return balance + user.balance;
+   
+// }, 0);
+// Пиши код выше этой строки
+
+
+// Task 33
+// Дополни функцию getTotalFriendCount(users) так, чтобы она считала и возвращала общее количество друзей (свойство friends) всех пользователей из массива users.
+
+// Пиши код ниже этой строки
+// const getTotalFriendCount = users => users.reduce((friends, user) => {
+   
+//   return friends + user.friends.length;                
+
+// }, 0);
+// Пиши код выше этой строки
+
+
+// Task 34
+// Дополни код так, чтобы в переменной ascendingReleaseDates получилась отсортированная по возрастанию копия массива releaseDates, 
+// а в переменной alphabeticalAuthors копия массива имён авторов authors отсортированная в по алфавиту.
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   'Ли Танит',
+//   'Бернард Корнуэлл',
+//   'Роберт Шекли',
+//   'Федор Достоевский'
+// ];
+// // Пиши код ниже этой строки
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+
+// const alphabeticalAuthors = [...authors].sort();
+
+
+// Task 35
+// Онлайн бибилиотеке необходимо отображать книги сортированные по дате издания, по её возрастанию или убыванию. 
+// Дополни код так, чтобы в переменной ascendingReleaseDates получилась отсортированная по возрастанию копия массива releaseDates, 
+// а в переменной descendingReleaseDates копия отсортированная по убыванию.
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// // Пиши код ниже этой строки
+
+// const ascendingReleaseDates = [...releaseDates].sort((a,b) => a - b);
+
+// const descendingReleaseDates = [...releaseDates].sort((a,b) => b - a);
+
+
+// Task 36
+// Онлайн бибилиотеке необходимо отображать книги отсортированные по автору, в алфавитном и обратном алфавитном порядке. 
+// Дополни код так, чтобы в переменной authorsInAlphabetOrder получилась отсортированная по алфавиту копия массива authors, 
+// а в переменной authorsInReversedOrder копия отсортированная в обратном алфавитном порядке.
+
+const authors = [
+  'Ли Танит',
+  'Бернард Корнуэлл',
+  'Роберт Шекли',
+  'Федор Достоевский',
+  'Говард Лавкрафт'
+];
+// Пиши код ниже этой строки
+
+const authorsInAlphabetOrder = [...authors].sort((a,b) => a.localeCompare(b)); // в алфавитном порядке
+
+const authorsInReversedOrder = [...authors].sort((a,b) => b.localeCompare(a)); // в обратном алфавитном порядке
+
+
+// Task 37
+// Дополни код так, чтобы:
+// В переменной sortedByAuthorName получился массив книг отсортированный по имени автора в алфавитном порядке.
+// В переменной sortedByReversedAuthorName получился массив книг отсортированный по имени автора в обратном алфавитном порядке.
+// В переменной sortedByAscendingRating получился массив книг отсортированный по возрастанию рейтинга.
+// В переменной sortedByDescentingRating получился массив книг отсортированный по убыванию рейтинга.
+
+const books = [
+  { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+  { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+  { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+  { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+  { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
+];
+// Пиши код ниже этой строки
+
+const sortedByAuthorName = [...books].sort((firstAuthor, secondAuthor) => firstAuthor.author.localeCompare(secondAuthor.author));
+
+const sortedByReversedAuthorName = [...books].sort((firstAuthor, secondAuthor) => secondAuthor.author.localeCompare(firstAuthor.author));
+
+const sortedByAscendingRating = [...books].sort((firstRating, secondRating) => firstRating.rating - secondRating.rating);
+
+const sortedByDescentingRating = [...books].sort((firstRating, secondRating) => secondRating.rating - firstRating.rating);
+
+
+// Task 38
+// Дополни функцию sortByAscendingBalance(users) так, 
+// чтобы она возвращала массив пользователей отсортированный по возрастанию их баланса (свойство balance).
+
+// Пиши код ниже этой строки
+const sortByAscendingBalance = users => {
+  return [...users].sort((firstBalance, secondBalance) => firstBalance.balance - secondBalance.balance);
+   
 };
 // Пиши код выше этой строки
+
+
+// Task 39
+// Дополни функцию sortByDescendingFriendCount(users) так, 
+// чтобы она возвращала массив пользователей отсортированный по убыванию количества их друзей (свойство friends).
+
+// Пиши код ниже этой строки
+const sortByDescendingFriendCount = users => {
+  return [...users].sort((firstFriend, secondFriend) => secondFriend.friends.length - firstFriend.friends.length);
+   
+};
+// Пиши код выше этой строки
+
+
+// Task 40
+// Дополни функцию sortByName(users) так, чтобы она возвращала массив пользователей отсортированный по их имени (свойство name) в алфавитном порядке.
+
+
+
+
+
