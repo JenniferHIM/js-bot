@@ -325,4 +325,178 @@ for (let i = min; i <= max; i += 1) {
 }
 
 
-Task 23
+// Task 23
+// Напиши функцию filterArray(numbers, value), которая принимает массив чисел (параметр numbers) и возвращает новый массив, 
+// в котором будут только те элементы массива numbers, которые больше чем значение параметра value (число).
+
+function filterArray(numbers, value) {
+  // Пиши код ниже этой строки
+  const newArray = [];
+for (let number of numbers) {
+  if (number > value) {
+  newArray.push(number);
+}
+}
+ return newArray;
+  // Пиши код выше этой строки
+
+}
+
+// Task 24
+// Функция checkFruit(fruit) принимает строку с названием фрукта (параметр fruit), и проверяет есть ли такой фрукт в массиве fruits.
+// Дополни код функции так, что если:
+// фрукт есть в массиве, то функция возвращает true;
+// фрукта нет в массиве, то функция возвращает false.
+
+function checkFruit(fruit) {
+  const fruits = ['яблоко', 'слива', 'груша', 'апельсин'];
+
+  return fruits.includes(fruit); // Дополни эту строку
+}
+
+
+// Task 25
+// Общими элементами массивов называют те элементы, которые присутствуют во всех массивах.
+// Например, в двух массивах [1, 3, 5] и [0, 8, 5, 3] общими будут числа 3 и 5, т.к. они присутствуют в обоих исходных массивах. 
+// А числа 0, 1 и 8 присутствуют только в одном из массивов.
+// Напиши функцию getCommonElements(array1, array2) которая получает два массива произвольной длины в параметры array1 и array2, 
+// и возвращает новый массив, состоящий из тех элементов, которые присутствуют в обоих исходных массивах.
+
+function getCommonElements(array1, array2) {
+  // Пиши код ниже этой строки
+let newArray = [];
+  
+  for (let arr1 of array1) {
+    if (array2.includes(arr1)) {
+      newArray.push(arr1);
+    }
+  }
+  return newArray;
+  // Пиши код выше этой строки
+}
+
+
+// Task 26
+// Выполни рефакторинг кода функции calculateTotalPrice(order) заменив цикл for на for...of.
+
+function calculateTotalPrice(order) {
+  let total = 0;
+  // Пиши код ниже этой строки
+
+  for (let value of order) {
+    total += value;
+  }
+
+  // Пиши код выше этой строки
+  return total;
+}
+
+
+// Task 27
+// Выполни рефакторинг функции filterArray(numbers, value) заменив цикл for на for...of.
+
+function filterArray(numbers, value) {
+  // Пиши код ниже этой строки
+  const filteredNumbers = [];
+
+  for (let number of numbers) {
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  }
+
+  return filteredNumbers;
+  // Пиши код выше этой строки
+}
+
+
+// Task 28
+// Дополни выражения остатка от деления так, чтобы код проходил тесты.
+// Объявлена переменная a.
+// Значение переменной a это число 0.
+// Объявлена переменная b.
+// Значение переменной b это число 1.
+// Объявлена переменная c.
+// Значение переменной c это число 3.
+// Объявлена переменная d.
+// Значение переменной d это число 5.
+// Объявлена переменная e.
+// Значение переменной e это число 2.
+
+const a = 3 % 3;
+const b = 4 % 3;
+const c = 11 % 8;
+const d = 12 % 7;
+const e = 8 % 3;
+
+
+// Task 29
+// Напиши функцию getEvenNumbers(start, end) которая возвращает массив всех чётных чисел от start до end. 
+// Чётным считается число которое делится на 2 без остатка.
+
+function getEvenNumbers(start, end) {
+  // Пиши код ниже этой строки
+let newArr = [];
+for (i = start; i <= end; i += 1) {
+    if (i % 2 === 0) {
+      newArr.push(i); 
+    }
+}
+  return newArr;
+  // Пиши код выше этой строки
+}
+
+
+// Task 30
+// Дополни код так, чтобы в переменную number записывалось первое число от start до end, которое делится на 5 без остатка.
+
+const start = 6;
+const end = 27;
+let number;
+
+for (let i = start; i < end; i += 1) {
+  if (i % 5 === 0) {
+    number = i;
+    break;
+  }
+}
+
+
+// Task 31
+// Выполни рефакторинг функции findNumber(start, end, divisor) так, чтобы она:
+// возвращала первое число от start до end, которое делится на divisor без остатка;
+// не использовала оператор break;
+// не использовала переменную number.
+
+function findNumber(start, end, divisor) {
+  // Пиши код ниже этой строки
+  let number;
+
+  for (let i = start; i < end; i += 1) {
+    if (i % divisor === 0) {
+      return i;
+         }
+  }
+
+  return number;
+  // Пиши код выше этой строки
+}
+
+
+// Task 32
+// Напиши функцию includes(array, value), которая делает тоже самое, что и метод массива массив.includes(значение) - проверяет, 
+// есть ли в массиве array значение value, возвращая true если есть и false в противном случае.
+// При выполнении этой задачи в теле функции includes() нельзя использовать метод массив.includes(значение).
+
+function includes(array, value) {
+  // Пиши код ниже этой строки
+
+for (let arr of array) {
+  if (arr === value) {
+    return true;
+  }
+   
+}
+  return false;
+  // Пиши код выше этой строки
+}
