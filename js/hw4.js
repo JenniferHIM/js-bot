@@ -158,6 +158,18 @@
   //   const messages = orders.map((order, index) => composeMessage.call(order, index + 1));
    
   //   console.log(messages);
+
+  // Пиши код ниже этой строки
+  // Через цикл for
+// function composeMessage(position) {
+//   return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`;
+// }
+
+// const messages = [];
+// for (let i = 0; i < orders.length; i++) {
+//   const msg = composeMessage.call(orders[i], i + 1);
+//   messages.push(msg);
+// }
          
   //Task 8 
   //Выполни рефакторинг кода так, чтобы функция composeMessage(position) вызывалась методом apply.
@@ -176,6 +188,17 @@
 //   const messages = orders.map((order, index) =>
 //   composeMessage.apply(order, [index + 1])
 // ); 
+
+// Через цикл for
+// function composeMessage(position) {
+//   return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`;
+// }
+
+// const messages = [];
+// for (let i = 0; i < orders.length; i++) {
+//   const msg = composeMessage.apply(orders[i], [i + 1]);
+//   messages.push(msg);
+// }
 
 
 //Task 9
